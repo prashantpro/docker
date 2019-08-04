@@ -1,7 +1,7 @@
 FROM prashantp/centos-jdk:8
 MAINTAINER Prashant Padmanabhan <prashant.pro@gmail.com>
 
-ADD ../apps/wildfly-10.0.0.Final /opt/wildfly
+ADD ../shared/wildfly-10.0.0.Final /opt/wildfly
 
 EXPOSE 8080 9990
 

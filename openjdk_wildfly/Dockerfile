@@ -1,4 +1,5 @@
-FROM prashantp/openjdk:8
+FROM openjdk:8
+
 MAINTAINER Prashant Padmanabhan <prashant.pro@gmail.com>
 
 ADD ../shared/wildfly-10.0.0.Final /opt/wildfly
@@ -12,8 +13,6 @@ ENV STANDALONE standalone-ha
 
 
 RUN /opt/wildfly/bin/add-user.sh admin Prash@2017 --silent
-
-EXPOSE 8080 9990
 
 # Set the default command to run on boot 
 # This will boot WildFly in the standalone mode and bind to all interface 

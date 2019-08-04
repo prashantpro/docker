@@ -1,0 +1,42 @@
+prashant@ip-10-20-0-217:/var/www$ sudo certbot --authenticator webroot --installer apache \
+> --webroot-path /var/www/html -d build.incept.infypedia.org
+Saving debug log to /var/log/letsencrypt/letsencrypt.log
+Plugins selected: Authenticator webroot, Installer apache
+Obtaining a new certificate
+Performing the following challenges:
+http-01 challenge for build.incept.infypedia.org
+Using the webroot path /var/www/html for all unmatched domains.
+Waiting for verification...
+Cleaning up challenges
+Created an SSL vhost at /etc/apache2/sites-available/uchiwa-le-ssl.conf
+Enabled Apache socache_shmcb module
+Enabled Apache ssl module
+Deploying Certificate for build.incept.infypedia.org to VirtualHost /etc/apache2/sites-available/uchiwa-le-ssl.conf
+Enabling available site: /etc/apache2/sites-available/uchiwa-le-ssl.conf
+
+Please choose whether or not to redirect HTTP traffic to HTTPS, removing HTTP access.
+-------------------------------------------------------------------------------
+1: No redirect - Make no further changes to the webserver configuration.
+2: Redirect - Make all requests redirect to secure HTTPS access. Choose this for
+new sites, or if you're confident your site works on HTTPS. You can undo this
+change by editing your web server's configuration.
+-------------------------------------------------------------------------------
+Select the appropriate number [1-2] then [enter] (press 'c' to cancel): 1
+
+-------------------------------------------------------------------------------
+Congratulations! You have successfully enabled
+https://build.incept.infypedia.org
+
+You should test your configuration at:
+https://www.ssllabs.com/ssltest/analyze.html?d=build.incept.infypedia.org
+-------------------------------------------------------------------------------
+
+IMPORTANT NOTES:
+ - Congratulations! Your certificate and chain have been saved at:
+   /etc/letsencrypt/live/build.incept.infypedia.org/fullchain.pem
+   Your key file has been saved at:
+   /etc/letsencrypt/live/build.incept.infypedia.org/privkey.pem
+   Your cert will expire on 2018-05-01. To obtain a new or tweaked
+   version of this certificate in the future, simply run certbot again
+   with the "certonly" option. To non-interactively renew *all* of
+   your certificates, run "certbot renew"

@@ -1,0 +1,18 @@
+version: '3.1'
+
+services:
+
+  db:
+    image: mysql/mysql-server:5.7
+    command: ['--character-set-server=utf8mb4', '--collation-server=utf8mb4_unicode_ci'] 
+    container_name: mysql57dock
+    restart: always
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_USER: 'nokosapp'
+      MYSQL_PASSWORD: 'iNokos@18'
+      MYSQL_DATABASE: 'nokos'
+      MYSQL_ROOT_PASSWORD: 'secret'
+    volumes:
+      - /mnt/data/pp/docker/docker-volumes/mysql57:/var/lib/mysql     

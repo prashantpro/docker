@@ -16,7 +16,7 @@ ENV BUILD_VERSION b13
 
 # yum install all but JDK from repo
 
-ADD ../apps/jdk-8u121-linux-x64.rpm /tmp/jdk-8u121-linux-x64.rpm
+ADD ../shared/jdk-8u121-linux-x64.rpm /tmp/jdk-8u121-linux-x64.rpm
 
 RUN yum update -y \
   && yum -y install wget \
