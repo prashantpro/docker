@@ -3,16 +3,16 @@ version: '3.1'
 services:
 
   db:
-    image: mysql/mysql-server:8
+    image: mysql/mysql-server:latest
     command: ['--character-set-server=utf8mb4', '--collation-server=utf8mb4_unicode_ci', '--default-authentication-plugin=mysql_native_password'] 
-    container_name: mysql8dock
+    container_name: mysqldock
     restart: always
     ports:
       - 3306:3306
     environment:
-      MYSQL_USER: 'nokosapp'
-      MYSQL_PASSWORD: 'iNokos@18'
-      MYSQL_DATABASE: 'nokos'
+      MYSQL_USER: 'prashant'
+      MYSQL_PASSWORD: 'iPro@work'
+      MYSQL_DATABASE: 'sampledb'
       MYSQL_ROOT_PASSWORD: 'secret'
     volumes:
-      - /mnt/data/pp/docker/docker-volumes/mysql8:/var/lib/mysql     
+      - /data/docker-volumes/mysql-latest:/var/lib/mysql     

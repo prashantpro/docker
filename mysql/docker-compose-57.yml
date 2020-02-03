@@ -15,4 +15,4 @@ services:
       MYSQL_DATABASE: 'nokos'
       MYSQL_ROOT_PASSWORD: 'secret'
     volumes:
-      - /mnt/data/pp/docker/docker-volumes/mysql57:/var/lib/mysql     
+      - /data/docker-volumes/mysql57:/var/lib/mysql     
